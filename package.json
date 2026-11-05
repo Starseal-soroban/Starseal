@@ -16,6 +16,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.5",
+    "@noble/hashes": "^2.4.0",
+    "@noble/post-quantum": "^0.7.1",
     "@types/node": "^22.0.0",
     "typescript": "^6.0.3",
     "vitest": "^5.1.0"

@@ -20,3 +20,6 @@ soroban-sdk = { workspace = true, features = ["testutils"] }
 # Independent ML-DSA implementation used only to produce signatures in tests,
 # so the host's verifier is checked against a second implementation.
 fips204 = { version = "0.5.0", default-features = false, features = ["ml-dsa-44", "ml-dsa-65", "ml-dsa-87"] }
+# Read the shared JSON test vectors in tests/vectors.rs.
+hex = "0.4"
+serde_json = "1"
