@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = ["contracts/*"]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/Starseal-soroban/Starseal"
+rust-version = "1.91.0"
+
+[workspace.dependencies]
+# Protocol 30 ("Bell") adds the ML-DSA host functions (CAP-87). Pinned to the
+# release candidate until 30.0.0 is published.
+soroban-sdk = "=30.0.0-rc.1"
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true

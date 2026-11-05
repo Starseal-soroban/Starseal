@@ -1,0 +1,23 @@
+# Rust
+/target
+**/test_snapshots/
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+
+# Local environment and keys
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+.starseal/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+*.log
