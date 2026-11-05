@@ -29,8 +29,10 @@ jobs:
         run: cargo clippy --all-targets -- -D warnings
       - name: Test
         run: cargo test
+      # soroban-sdk 30 only builds contracts through Stellar CLI 30 or newer.
+      - uses: stellar/stellar-cli@v30.0.1
       - name: Build wasm
-        run: cargo build --target wasm32v1-none --release -p starseal-mldsa-verifier
+        run: stellar contract build --package starseal-mldsa-verifier
       - name: Report wasm size
         run: |
           echo "### Contract sizes" >> "$GITHUB_STEP_SUMMARY"
