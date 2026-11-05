@@ -14,6 +14,7 @@ Thanks for helping make Soroban smart accounts quantum-safe. This guide covers h
 You need:
 
 - Rust 1.91 or newer, with the `wasm32v1-none` target (`rustup target add wasm32v1-none`)
+- [Stellar CLI](https://github.com/stellar/stellar-cli) 30 or newer, to build contracts (`stellar contract build`)
 - Node.js 22 or newer and pnpm 10
 - Docker, for the end-to-end and OpenBao tests
 

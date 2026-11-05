@@ -44,11 +44,11 @@ test-vectors/       Signatures shared by the Rust and TypeScript tests
 
 ## Development
 
-You need Rust 1.91 or newer with the `wasm32v1-none` target, Node.js 22 or newer, and pnpm 10.
+You need Rust 1.91 or newer with the `wasm32v1-none` target, [Stellar CLI](https://github.com/stellar/stellar-cli) 30 or newer, Node.js 22 or newer, and pnpm 10. soroban-sdk 30 only builds contracts through Stellar CLI 30+.
 
 ```sh
 cargo test                       # contract tests
-cargo build --target wasm32v1-none --release
+stellar contract build           # wasm build
 pnpm install
 pnpm test                        # TypeScript tests
 ```
